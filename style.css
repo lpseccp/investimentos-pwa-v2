@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px;
+  background: #008cba;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+#limpar {
+  margin-bottom: 10px;
+  background: #e74c3c;
+}

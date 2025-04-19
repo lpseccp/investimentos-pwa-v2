@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App de Investimentos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <meta name="theme-color" content="#0a0a0a" />
+</head>
+<body>
+  <h1>Rebalanceamento de Investimentos</h1>
+
+  <form id="form">
+    <input type="text" id="ativo" placeholder="Nome do Ativo" required />
+    <input type="number" id="preco" placeholder="Preço Atual" required />
+    <input type="number" id="nota" placeholder="Nota de Importância (1 a 10)" required />
+    <input type="number" id="saldo" placeholder="Saldo Atual (R$)" required />
+    <button type="submit">Adicionar Ativo</button>
+  </form>
+
+  <button id="limpar">Limpar Tudo</button>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Ativo</th>
+        <th>Preço</th>
+        <th>Nota</th>
+        <th>Saldo Atual</th>
+        <th>% Ideal</th>
+        <th>% Atual</th>
+        <th>Diferença</th>
+        <th>Recomendação</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Script principal -->
+  <script src="app.js"></script>
+
+  <!-- Registro do Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(reg => console.log('Service Worker registrado com sucesso!', reg))
+          .catch(err => console.log('Erro ao registrar Service Worker:', err));
+      });
+    }
+  </script>
+</body>
+</html>
