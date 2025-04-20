@@ -13,6 +13,7 @@
     <h1>Minha Carteira</h1>
     <button id="theme-toggle">🌙</button>
   </header>
+
   <main>
     <form id="investment-form">
       <input type="text" placeholder="Ativo" id="ativo" required />
@@ -21,17 +22,23 @@
       <input type="number" placeholder="Saldo Atual" id="saldo" required />
       <button type="submit">Adicionar</button>
     </form>
+
     <section id="filtros">
+      <label for="ordenar-por">Ordenar por:</label>
       <select id="ordenar-por">
         <option value="nome">Nome</option>
         <option value="nota">Nota</option>
         <option value="saldo">Saldo</option>
       </select>
     </section>
+
     <section id="ativos-lista"></section>
+
     <canvas id="grafico-pizza"></canvas>
     <canvas id="grafico-barras"></canvas>
+
     <section id="historico-rebalanceamentos"></section>
+
     <section id="importar-exportar">
       <input type="file" id="csv-upload" />
       <textarea id="json-backup" placeholder="Cole o JSON aqui"></textarea>
